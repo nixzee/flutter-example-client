@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_example_client/features/app_config/service/app_config_service.dart';
+import 'package:flutter_example_client/router.dart';
 import 'package:flutter_example_client/theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
@@ -27,8 +28,14 @@ class _AppState extends State<App> {
       ],
       supportedLocales: [
         Locale('en'), // English
-        Locale('es'), // Spanish
       ],
+      themeMode: appConfigService.themeMode,
+      theme: appTheme.light,
+      darkTheme: appTheme.dark,
+      locale: appConfigService.locale,
+      routerDelegate: AppRouter.router.routerDelegate,
+      routeInformationParser: AppRouter.router.routeInformationParser,
+      routeInformationProvider: AppRouter.router.routeInformationProvider,
     );
   }
 }

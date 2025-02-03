@@ -51,13 +51,13 @@ class _TopAppBarState extends State<TopAppBar> {
               onPressed: () {
                 setState(() {
                   ThemeMode themeMode =
-                      (isDark) ? ThemeMode.dark : ThemeMode.light;
+                      (isDark) ? ThemeMode.light : ThemeMode.dark;
                   appConfigService.themeMode = themeMode;
                 });
               },
               icon: Icon(
                 isDark ? Icons.light_mode : Icons.dark_mode,
-                color: Theme.of(context).primaryColor,
+                // color: Theme.of(context).primaryColor,
               ),
             ),
           )

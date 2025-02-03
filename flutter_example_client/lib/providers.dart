@@ -3,10 +3,10 @@ import 'package:provider/provider.dart';
 
 class Providers {
   static List<ChangeNotifierProvider> register(
-      AppConfigService appConfigServce) {
+      AppConfigService appConfigService) {
     return [
       // App Config Service
-      ChangeNotifierProvider<AppConfigService>.value(value: appConfigServce),
+      ChangeNotifierProvider<AppConfigService>.value(value: appConfigService),
       // TODO: Add other providers
     ];
   }
